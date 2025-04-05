@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
 .navbar {
@@ -79,8 +80,8 @@
 
 .hero-card {
     background-color: #f4e7e0;
-    width: 300px;
-    height: 60%;
+    min-width: 300px;
+    min-height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -132,7 +133,8 @@
 
 .hero-info {
     padding-left: 20px;
-    max-width: 600px;
+    max-width: 1000px;
+    min-width: 600px;
 }
 
 .greeting {
@@ -161,12 +163,25 @@ h1 {
     cursor: pointer;
 }
 
+.resume-btn:hover {
+    background-color: white;
+    color: #5d8a6a;
+    transition: 0.3s ease-in-out;
+    border: 1px solid #5d8a6a;
+}
+
 .projects-btn {
     background-color: transparent;
     border: 1px solid #333;
     padding: 10px 30px;
     border-radius: 25px;
     cursor: pointer;
+}
+
+.projects-btn:hover {
+    background-color: #5d8a6a;
+    color: white;
+    transition: 0.3s ease-in-out;
 }
 
 .bio, .experience, .interests {
@@ -177,3 +192,27 @@ h1 {
 .highlight {
     color: #5d8a6a;
 }
+
+footer {
+    padding: 2rem 8rem;
+    color: black;
+    font-size: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    gap: 4rem;
+}
+
+.socials, .phone, .email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.phone p, .email p {
+    font-weight: 400;
+}
+
