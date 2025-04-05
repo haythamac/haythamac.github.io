@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff;
+    color: black;
+    padding: 2rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+.logo:hover {
+    cursor: pointer;
+    color: #709878;
+    transition: color 0.3s ease-in-out;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    padding: 0.5rem 0rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.nav-links li a:hover {
+    color: #709878;
+    transition: color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hero-background {
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.left-background {
+    background-color: #e2cdbf;
+    width: 35%;
+    font-size: 0px;
+}
+
+.right-background {
+    background-color: #ffffff;
+    width: 65%;
+    font-size: 0px;
+}
+
+.hero-section {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 25%;
+    align-items: center;
+}
+
+.hero-card {
+    background-color: #f4e7e0;
+    width: 300px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin-right: 50px;
+    z-index: 10;
+}
+
+.hero-card-content{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 3rem;
+}
+
+.hero-card h2 {
+    margin-bottom: 1rem;
+}
+
+.hero-card p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.hero-card span{
+    display:block;
+    width:20%; /*or whatever width you want the effect of <hr>*/
+    border-top: 1px solid #A4A4A4;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 1rem 0;
+}
+
+.hero-info {
+    padding-left: 20px;
+    max-width: 600px;
+}
+
+.greeting {
+    color: #5d8a6a;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.resume-btn {
+    background-color: #5d8a6a;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.projects-btn {
+    background-color: transparent;
+    border: 1px solid #333;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.bio, .experience, .interests {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.highlight {
+    color: #5d8a6a;
+}
