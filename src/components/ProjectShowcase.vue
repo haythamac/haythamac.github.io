@@ -32,7 +32,7 @@ const projects = [
     },
     {
         title: "Guild Management System",
-        image: " images/paragon.png",
+        image: "images/paragon.png",
         description: "A comprehensive guild management system designed for online gaming communities. This full-stack application allows guild leaders to manage members, events, and communications effectively. Built with Laravel for the backend and Vue.js for the frontend, it offers a seamless user experience.",
         techStack: [
             { name: "Laravel", icon: Server },
@@ -48,6 +48,40 @@ const projects = [
         ],
         demoLink: "#",
         githubLink: "https://github.com/haythamac/paragon-fe",
+    },
+    {
+        title: "Website Admin Dashboard for E-commerce App",
+        description: "A comprehensive admin dashboard for managing an e-commerce website. This application provides a user-friendly interface for managing products, orders, and customer information. Built with vanilla Javascript and PHP with Firebase.",
+        techStack: [
+            { name: "PHP", icon: Server },
+            { name: "Javascript", icon: Layout },
+            { name: "Firebase", icon: Database },
+        ],
+        features: [
+            "Product management with CRUD operations",
+            "Order tracking and management",
+            "Customer information management",
+            "Dashboard with analytics, insights, reporting features, RBAC, and audit logs",
+        ],
+        demoLink: "#",
+        githubLink: "#",
+    },
+    {
+        title: "Learning Management System",
+        description: "A comprehensive learning management system designed for online education platforms. This full-stack application allows educators to manage courses, students, and learning materials effectively. Built with PHP for the backend and Javascript for the frontend, and MySQL for the database.",
+        techStack: [
+            { name: "PHP", icon: Server },
+            { name: "Javascript", icon: Layout },
+            { name: "MySQL", icon: Database },
+        ],
+        features: [
+            "Course management with CRUD operations",
+            "Create and manage lessons and assessments",
+            "Manage grading and student progress",
+            "Reporting and analytics",
+        ],
+        demoLink: "#",
+        githubLink: "#",
     },
 ];
 </script>
@@ -124,17 +158,28 @@ const projects = [
                         </div>
 
                         <div class="flex flex-wrap gap-3">
-                            <Button as-child>
-                                <a :href="project.demoLink" target="_blank" rel="noopener noreferrer" class="flex row">
+                            <Button as-child :disabled="!project.demoLink || project.demoLink === '#'">
+                                <a v-if="project.demoLink && project.demoLink !== '#'" :href="project.demoLink"
+                                    target="_blank" rel="noopener noreferrer" class="flex row">
                                     <ExternalLink class="mr-2 h-4 w-4" />
                                     Live Demo
                                 </a>
+                                <span v-else class="flex row text-gray-400">
+                                    <ExternalLink class="mr-2 h-4 w-4" />
+                                    Live Demo
+                                </span>
                             </Button>
-                            <Button variant="outline" as-child>
-                                <a :href="project.githubLink" target="_blank" rel="noopener noreferrer" class="flex row">
+                            <Button variant="outline" as-child
+                                :disabled="!project.githubLink || project.githubLink === '#'">
+                                <a v-if="project.githubLink && project.githubLink !== '#'" :href="project.githubLink"
+                                    target="_blank" rel="noopener noreferrer" class="flex row">
                                     <Github class="mr-2 h-4 w-4" />
                                     Source Code
                                 </a>
+                                <span v-else class="flex row text-gray-400">
+                                    <Github class="mr-2 h-4 w-4" />
+                                    Source Code
+                                </span>
                             </Button>
                         </div>
                     </div>
