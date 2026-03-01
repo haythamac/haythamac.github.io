@@ -50,6 +50,25 @@ const projects = [
         githubLink: "https://github.com/haythamac/paragon-fe",
     },
     {
+        title: "Folkvang Timer",
+        image: "images/folkvang.png",
+        description: "A timer application for tracking time spent in a game called Folkvang. It allows users to set timers, track time spent on different activities, and provides real-time updates using websockets. Built with Express.js for the backend and Vue.js for the frontend, it offers a responsive design for both mobile and desktop users.",
+        techStack: [
+            { name: "Express.js", icon: Server },
+            { name: "Vue.js", icon: Layout },
+            { name: "SQLite", icon: Database },
+            { name: "REST API", icon: Code2 },
+        ],
+        features: [
+            "Real-time timer functionality for tracking time spent in the game using websocket",
+            "Timer functionality for tracking time spent in the game",
+            "User-friendly interface for setting and managing timers",
+            "Responsive design for mobile and desktop",
+        ],
+        demoLink: "https://folkvang-six.vercel.app/?demo=true",
+        githubLink: "https://github.com/haythamac/folkvang",
+    },
+    {
         title: "Website Admin Dashboard for E-commerce App",
         description: "A comprehensive admin dashboard for managing an e-commerce website. This application provides a user-friendly interface for managing products, orders, and customer information. Built with vanilla Javascript and PHP with Firebase.",
         techStack: [
